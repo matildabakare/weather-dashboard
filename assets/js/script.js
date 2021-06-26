@@ -6,6 +6,8 @@ var dayFourE1 = document.querySelector("#dayFour");
 var dayFiveE1 = document.querySelector("#dayFive");
 var cityInputEl = document.querySelector("#city");
 var cityFormEl = document.querySelector("#city-form");
+var cityNameEl = document.querySelector("#city-name");
+
 
 //variables for Current Date
 var tempEl = document.querySelector("#temp");
@@ -60,18 +62,12 @@ dayFiveE1.textContent = moment().add(5, 'days').format('MM/DD/YYYY ');
 //Displays the Weather Info on the page
 var displayWeatherInfo = function(info) {
 
-    // check if api returned any repos
-    // if (repos.length === 0) {
-    //   repoContainerEl.textContent = "No repositories found.";
-    //   return;
-    // }
-
-    console.log(info);
-
     tempEl.textContent = info.current.temp;
     humidityEl.textContent = info.current.humidity;
     uvindexEl.textContent = info.current.uvi;
     windEl.textContent = info.current.wind_speed;
+    uvindexEl.classList.add("badge");
+    uvindexEl.classList.add("bg-success");
 
 
     tempOneEl.textContent = info.daily[0].temp.day;
@@ -102,45 +98,7 @@ var displayWeatherInfo = function(info) {
     humidityFiveEl.textContent = info.daily[4].humidity;
     windFiveEl.textContent = info.daily[4].wind_speed;
     weatherIconFiveE1.setAttribute("src", "http://openweathermap.org/img/wn/" + info.daily[4].weather[0].icon + "@2x.png");
-    // // clear old content
-    // repoContainerEl.textContent = "";
-    // repoSearchTerm.textContent = searchTerm;
-  
-    // // loop over repos
-    // for (var i = 0; i < repos.length; i++) {
-    //   // format repo name
-    //   var repoName = repos[i].owner.login + "/" + repos[i].name;
-  
-    //   // create a link for each repo
-    //   var repoEl = document.createElement("a");
-    //   repoEl.classList = "list-item flex-row justify-space-between align-center";
-    //   repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
-  
-    //   // create a span element to hold repository name
-    //   var titleEl = document.createElement("span");
-    //   titleEl.textContent = repoName;
-  
-    //   // append to container
-    //   repoEl.appendChild(titleEl);
-  
-    //   // create a status element
-    //   var statusEl = document.createElement("span");
-    //   statusEl.classList = "flex-row align-center";
-  
-    //   // check if current repo has issues or not
-    //   if (repos[i].open_issues_count > 0) {
-    //     statusEl.innerHTML =
-    //       "<i class='fas fa-times status-icon icon-danger'></i>" + repos[i].open_issues_count + " issue(s)";
-    //   } else {
-    //     statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
-    //   }
-  
-    //   // append to container
-    //   repoEl.appendChild(statusEl);
-  
-    //   // append container to the dom
-    //   repoContainerEl.appendChild(repoEl);
-    // }
+    
 };
 
 
@@ -178,9 +136,9 @@ var getLatLon = function(city) {
           response.json().then(function(data) {
             var lat = data[0].lat;
             var lon = data[0].lon;
-
             getWeatherInfo(lat, lon);
           });
+
         } else {
           alert("Error: City Not Found");
         }
@@ -194,12 +152,13 @@ var getLatLon = function(city) {
 };
 
 
+
 //Function that listens for if the submit button is clicked and passes it to another function that gets the longitude and latitude
 var formSubmitHandler = function(event) {
     event.preventDefault();
     // get value from input element
     var city = cityInputEl.value.trim();
-
+    cityNameEl.textContent = city;
     if (city) {
         getLatLon(city);
         cityInputEl.value = "";

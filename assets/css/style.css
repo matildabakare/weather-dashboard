@@ -1,0 +1,30 @@
+#header-text {
+    text-align: center;
+}
+
+#city {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#city-button {
+    width: 100%;
+}
+
+
+#current-details {
+    border-style: solid;
+    padding: 1%;
+    margin-bottom: 3%;
+}
+
+.weather-col {
+    background-color: #083D56;
+    margin: 1%;
+    padding: 1%;
+    color: white;
+}
+
+#uvindex {
+    color: white;
+}

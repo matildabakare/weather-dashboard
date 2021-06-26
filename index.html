@@ -11,22 +11,26 @@
 </head>
 <body>
     <header class="jumbotron">
-        <h1 class="display-3">Weather Dashboard</h1>
+        <h1 id="header-text" class="display-3">Weather Dashboard</h1>
     </header>
 
     <div class="m-1 row">
-        <div class="col-4" id="search-portion">
+        <div class="col-3" id="search-portion">
             <h2>Search for a City:</h2>
+            <div class="row">
+
+
+            </div>
             <form id="city-form" class="just-a-form">
                 <input name="city" id="city" type="text" autofocus="true" class="form-input" /> <br>
-                <button type="submit" class="btn">Search</button>
+                <button type="submit" id="city-button" class="btn btn-primary">Search</button>
             </form>
 
         </div>
 
-        <div class="col-8" id="main-portion">
-            <div id="written-details">
-                <h2 id="city-date">Name (<span id="current-date"></span>)</h2>
+        <div class="col-9" id="main-portion">
+            <div id="current-details">
+                <h2 id="city-date"><span id="city-name">City</span> (<span id="current-date"></span>)</h2>
                 <p>Temp: <span id="temp"></span> &#8457</p>
                 <p>Wind: <span id="wind"></span> MPH</p>
                 <p>Humidity: <span id="humidity"></span> %</p>
@@ -37,7 +41,7 @@
             <div id="forecast">
                 <h3>5-Day Forecast:</h3>
                 <div class="m-1 row">
-                    <div class="col">
+                    <div class="col weather-col">
                         <h5 id="dayOne"></h4>
                         <img id="weather-icon-one">
                         <p>Temp: <span id="tempOne"></span> &#8457</p>
@@ -46,7 +50,7 @@
 
                     </div>
 
-                    <div class="col">
+                    <div class="col weather-col">
                         <h5 id="dayTwo"></h4>
                         <img id="weather-icon-two">
                         <p>Temp: <span id="tempTwo"></span> &#8457</p>
@@ -54,7 +58,7 @@
                         <p>Humidity: <span id="humidityTwo"></span> %</p>
                     </div>
 
-                    <div class="col">
+                    <div class="col weather-col">
                         <h5 id="dayThree"></h4>
                         <img id="weather-icon-three">
                         <p>Temp: <span id="tempThree"></span> &#8457</p>
@@ -62,7 +66,7 @@
                         <p>Humidity: <span id="humidityThree"></span> %</p>
                     </div>
 
-                    <div class="col">
+                    <div class="col weather-col">
                         <h5 id="dayFour"></h4>
                         <img id="weather-icon-four">
                         <p>Temp: <span id="tempFour"></span> &#8457</p>
@@ -70,7 +74,7 @@
                         <p>Humidity: <span id="humidityFour"></span> %</p>
                     </div>
 
-                    <div class="col">
+                    <div class="col weather-col">
                         <h5 id="dayFive"></h4>
                         <img id="weather-icon-five">
                         <p>Temp: <span id="tempFive"></span> &#8457</p>
