@@ -16,7 +16,7 @@ An applicatuon that allows the user to add important events to a daily planner s
 https://matildabakare.github.io/weather-dashboard/
 
 ## Screenshots
-![image](assets/images/website-image.PNG)
+![image](assets/images/Capture.PNG)
 
 ## Contribution
 Made by Matilda Bakare
