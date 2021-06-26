@@ -17,7 +17,7 @@
     <div class="m-1 row">
         <div class="col-4" id="search-portion">
             <h2>Search for a City:</h2>
-            <form id="just-a-form" class="just-a-form">
+            <form id="city-form" class="just-a-form">
                 <input name="city" id="city" type="text" autofocus="true" class="form-input" /> <br>
                 <button type="submit" class="btn">Search</button>
             </form>
@@ -27,12 +27,58 @@
         <div class="col-8" id="main-portion">
             <div id="written-details">
                 <h2 id="city-date">Name (<span id="current-date"></span>)</h2>
-
+                <p>Temp: <span id="temp"></span> &#8457</p>
+                <p>Wind: <span id="wind"></span> MPH</p>
+                <p>Humidity: <span id="humidity"></span> %</p>
+                <p>UV Index: <span id="uvindex"></span></p>
             </div>
 
 
             <div id="forecast">
                 <h3>5-Day Forecast:</h3>
+                <div class="m-1 row">
+                    <div class="col">
+                        <h5 id="dayOne"></h4>
+                        <img id="weather-icon-one">
+                        <p>Temp: <span id="tempOne"></span> &#8457</p>
+                        <p>Wind: <span id="windOne"></span> MPH</p>
+                        <p>Humidity: <span id="humidityOne"></span> %</p>
+
+                    </div>
+
+                    <div class="col">
+                        <h5 id="dayTwo"></h4>
+                        <img id="weather-icon-two">
+                        <p>Temp: <span id="tempTwo"></span> &#8457</p>
+                        <p>Wind: <span id="windTwo"></span> MPH</p>
+                        <p>Humidity: <span id="humidityTwo"></span> %</p>
+                    </div>
+
+                    <div class="col">
+                        <h5 id="dayThree"></h4>
+                        <img id="weather-icon-three">
+                        <p>Temp: <span id="tempThree"></span> &#8457</p>
+                        <p>Wind: <span id="windThree"></span> MPH</p>
+                        <p>Humidity: <span id="humidityThree"></span> %</p>
+                    </div>
+
+                    <div class="col">
+                        <h5 id="dayFour"></h4>
+                        <img id="weather-icon-four">
+                        <p>Temp: <span id="tempFour"></span> &#8457</p>
+                        <p>Wind: <span id="windFour"></span> MPH</p>
+                        <p>Humidity: <span id="humidityFour"></span> %</p>
+                    </div>
+
+                    <div class="col">
+                        <h5 id="dayFive"></h4>
+                        <img id="weather-icon-five">
+                        <p>Temp: <span id="tempFive"></span> &#8457</p>
+                        <p>Wind: <span id="windFive"></span> MPH</p>
+                        <p>Humidity: <span id="humidityFive"></span> %</p>
+                    </div>
+
+                </div>
                 
             </div>
             
