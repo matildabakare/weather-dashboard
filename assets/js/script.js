@@ -128,7 +128,7 @@ var getWeatherInfo = function(lat, lon) {
 //Function that gets the longitude and latitude when given the city and passes it to the next function
 var getLatLon = function(city) {
     // format the gei api url
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=fc879f5526d7b281a6dba47b040f7417";
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=fc879f5526d7b281a6dba47b040f7417";
     
     // make a request to the url
     fetch(apiUrl).then(function(response) {
